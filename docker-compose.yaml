@@ -62,7 +62,7 @@ services:
       restart: always
 
    runtime-proxy-2:
-      image: pympymmasoftwarema/runtime-proxy
+      image: pymmasoftware/runtime-proxy
       container_name: "runtime-proxy-2"
       networks:
          drools-network:
