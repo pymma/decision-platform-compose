@@ -11,7 +11,7 @@ networks:
 services:
 
    kie-wb:
-      image: kie-wb
+      image: pymmasoftware/kie-wb
       container_name: "businessCentral"
       volumes:
          - gitdata:/home/niodir
@@ -27,7 +27,7 @@ services:
 
 
    admin-console:
-      image: runtime-admin-console
+      image: pymmasoftware/runtime-admin-console
       container_name: "admin-console"
       networks:
          drools-network:
@@ -45,7 +45,7 @@ services:
       restart: always
 
    runtime-proxy-1:
-      image: runtime-proxy
+      image: pymmasoftware/runtime-proxy
       container_name: "runtime-proxy-1"
       networks:
          drools-network:
@@ -62,7 +62,7 @@ services:
       restart: always
 
    runtime-proxy-2:
-      image: runtime-proxy
+      image: pympymmasoftwarema/runtime-proxy
       container_name: "runtime-proxy-2"
       networks:
          drools-network:
@@ -79,7 +79,7 @@ services:
       restart: always
 
    runtime-proxy-3:
-      image: runtime-proxy
+      image: pymmasoftware/runtime-proxy
       container_name: "runtime-proxy-3"
       networks:
          drools-network:
@@ -96,7 +96,7 @@ services:
       restart: always
 
    runtime-proxy-4:
-      image: runtime-proxy
+      image: pymmasoftware/runtime-proxy
       container_name: "runtime-proxy-4"
       networks:
          drools-network:
@@ -113,7 +113,7 @@ services:
       restart: always
 
    runtime-proxy-5:
-      image: runtime-proxy
+      image: pymmasoftware/runtime-proxy
       container_name: "runtime-proxy-5"
       networks:
          drools-network:
@@ -131,7 +131,7 @@ services:
 
 
    runtime-indexer:
-      image: runtime-indexer
+      image: pymmasoftware/runtime-indexer
       container_name: "runtime-indexer"
       networks:
          drools-network:
@@ -145,7 +145,7 @@ services:
       restart: always
 
    runtime-reverse-proxy:
-      image: runtime-reverse-proxy
+      image: pymmasoftware/runtime-reverse-proxy
       container_name: "runtime-reverse-proxy"
       networks:
          drools-network:
