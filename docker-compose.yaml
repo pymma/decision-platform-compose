@@ -161,6 +161,20 @@ services:
       restart: always
 
 
+   businessProxyDB:
+    image: mongo
+    container_name: "businessProxyDB"
+    volumes:
+      - mongodb:/data/db
+      - mongodb_config:/data/configdb
+    networks:
+      drools-network:
+        ipv4_address: 172.27.0.200
+    ports:
+      - 28017:27017
+    command: mongod
+    restart: always
+
 
 
 
@@ -177,8 +191,8 @@ services:
     volumes:
       - esdata2:/usr/share/elasticsearch/data
     networks:
-      drools-network-dev:
-        ipv4_address: 172.27.1.7
+      drools-network:
+        ipv4_address: 172.27.0.7
     ports:
       - 9300:9300
       - 9200:9200
