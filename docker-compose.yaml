@@ -47,6 +47,8 @@ services:
    runtime-proxy-1:
       image: pymmasoftware/runtime-proxy
       container_name: "runtime-proxy-1"
+      volumes:
+         - kieserverdir:/niodir-kieserver
       environment:
         PYMMA_OPTS: "-Dorg.kie.server.id=server1"
       networks:
@@ -66,6 +68,8 @@ services:
    runtime-proxy-2:
       image: pymmasoftware/runtime-proxy
       container_name: "runtime-proxy-2"
+      volumes:
+         - kieserverdir:/niodir-kieserver
       environment:
         PYMMA_OPTS: "-Dorg.kie.server.id=server2"
       networks:
@@ -85,6 +89,8 @@ services:
    runtime-proxy-3:
       image: pymmasoftware/runtime-proxy
       container_name: "runtime-proxy-3"
+      volumes:
+         - kieserverdir:/niodir-kieserver
       environment:
         PYMMA_OPTS: "-Dorg.kie.server.id=server3"
       networks:
@@ -104,6 +110,8 @@ services:
    runtime-proxy-4:
       image: pymmasoftware/runtime-proxy
       container_name: "runtime-proxy-4"
+      volumes:
+         - kieserverdir:/niodir-kieserver
       environment:
         PYMMA_OPTS: "-Dorg.kie.server.id=server4"
       networks:
@@ -123,6 +131,8 @@ services:
    runtime-proxy-5:
       image: pymmasoftware/runtime-proxy
       container_name: "runtime-proxy-5"
+      volumes:
+         - kieserverdir:/niodir-kieserver
       environment:
         PYMMA_OPTS: "-Dorg.kie.server.id=server5"
       networks:
@@ -215,3 +225,4 @@ volumes:
    gitdata:
    lucenedata:
    esdata2:
+   kieserverdir:
